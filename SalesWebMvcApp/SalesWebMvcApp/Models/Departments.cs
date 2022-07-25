@@ -8,9 +8,6 @@ namespace SalesWebMvcApp.Models
 {
     public class Departments
     {
-
-
-
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
@@ -23,9 +20,8 @@ namespace SalesWebMvcApp.Models
 
         }
 
-        public Departments(int id, string name)
+        public Departments(string name)
         {
-            Id = id;
             Name = name;
         }
 

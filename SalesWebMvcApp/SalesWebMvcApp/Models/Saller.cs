@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace SalesWebMvcApp.Models
 {
     public class Saller
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -26,9 +28,8 @@ namespace SalesWebMvcApp.Models
 
         }
 
-        public Saller(int id, string name, string email, DateTime birthDate, double baseSalary, Departments department)
+        public Saller(string name, string email, DateTime birthDate, double baseSalary, Departments department)
         {
-            Id = id;
             Name = name;
             Email = email;
             BirthDate = birthDate;

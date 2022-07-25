@@ -1,10 +1,12 @@
 ﻿using SalesWebMvcApp.Models.Enums;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SalesWebMvcApp.Models
 {
     public class SalesRecord
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public double Amount { get; set; }
@@ -16,9 +18,8 @@ namespace SalesWebMvcApp.Models
 
         }
 
-        public SalesRecord(int id, DateTime date, double amount, SaleStatus status, Saller seller)
+        public SalesRecord(DateTime date, double amount, SaleStatus status, Saller seller)
         {
-            Id = id;
             Date = date;
             Amount = amount;
             Status = status;

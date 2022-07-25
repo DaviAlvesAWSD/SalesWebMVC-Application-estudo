@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SalesWebMvcApp.Models;
 
-namespace SalesWebMvcApp.Data
+namespace SalesWebMvcApp.Models
 {
     public class SalesWebMvcAppContext : DbContext
     {
